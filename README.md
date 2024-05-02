@@ -1,27 +1,64 @@
-# NgxAlertMessageDocs
+<p align="center">
+  <img src="https://ngx-alert-message.web.app/assets/thunbnail.png" alt="Logo ngx alert message" />
+</p>
+<br>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+# ngx-alert-message
 
-## Development server
+ngx-alert-message provides an Angular API for simplified use of alerts on your website, completely customizable and easy to implement.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+### Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Start by installing the Angular Layout library from [npm](https://www.npmjs.com/package/@philipibovo/ngx-alert-message)
 
-## Build
+`npm install -save @philipibovo/ngx-alert-message`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Next, you'll need to import the ngx-flexbox module in your module.
 
-## Running unit tests
+**my-module.module.ts**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
 
-## Running end-to-end tests
+import { NgxAlertMessageModule } from '@philipibovo/ngx-alert-message';
+...
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+@NgModule({
+    ...
+    imports: [ NgxAlertMessageModule ],
+    ...
+});
+```
 
-## Further help
+Now, in your component, you must import ngx-alert-message:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```ts
+import { NgxAlertMessage } from '@philipibovo/ngx-alert-message';
+...
+constructor(private _ngxAlertMessage: NgxAlertMessage) { ... };
+...
+this._ngxAlertMessage.information('Message')
+...
+
+```
+
+Check out [all of the available options](https://ngx-alert-message.web.app/) for using ngx-alert-message in your application.
+
+---
+
+### Browser Support
+
+&nbsp;
+<a href="http://caniuse.com/#feat=flexbox" target="_blank">
+![caniuseflexbox](https://cloud.githubusercontent.com/assets/210413/21288118/917e3faa-c440-11e6-9b08-28aff590c7ae.png)
+</a>
+
+---
+
+### License
+
+The sources for this package are in the [ngx-alert-message](https://ngx-alert-message.web.app/) repository. <br/>
+Please file issues and pull requests against that repo.
+
+License: MIT

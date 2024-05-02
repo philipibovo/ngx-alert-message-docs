@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "./dist/ngx-alert-message-docs",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
